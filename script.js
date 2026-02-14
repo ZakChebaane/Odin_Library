@@ -30,9 +30,9 @@ function displayBooks(arr) {
         const beenReadDIV = document.createElement("label");
         const checkbox = document.createElement("input");
         checkbox.type = "checkbox";
-        titleDIV.textContent = "Title: " + arr[i].title;
-        authorDIV.textContent = "Author: " + arr[i].author;
-        numberOfPagesDIV.textContent = "Number of Pages: " + arr[i].numberOfPages;
+        titleDIV.textContent = `Title: ${arr[i].title}`;
+        authorDIV.textContent = `Author: ${arr[i].author}`;
+        numberOfPagesDIV.textContent = `Number of Pages: ${arr[i].numberOfPages}`;
         beenReadDIV.textContent = "Read?";
         beenReadDIV.htmlFor = "checkbox";
         checkbox.checked = arr[i].beenRead;
