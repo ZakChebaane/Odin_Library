@@ -51,6 +51,7 @@ body {
 }
 .card {
     background-color: white;
+    position: relative;
     border-radius: 8px;
     min-height: 40vh;
     box-shadow: 5px 5px 5px #a6a6a6;
@@ -71,4 +72,63 @@ label {
 #checkbox {
     width: 20px;
     height: 20px;
+}
+dialog {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 10px;
+    gap: 20px;
+}
+#modal-form {
+    display:grid;
+    grid-template: 1fr 1fr 1fr 1fr 1fr / 1fr 1fr;
+    gap: 20px;
+}
+#ftitle, #fauthor, #fpage-num {
+    justify-self: center;
+    align-self: center;
+    height: 20px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #d3d3d3;
+    padding: 2px;
+}
+form input:focus {
+    outline: none;
+    border: 1px solid dodgerblue !important;
+}
+#fread {
+    width: 20px;
+    height: 20px;
+    justify-self: center;
+    align-self: center;
+}
+.close-button {
+    background-color: white;
+    border: none;
+    color: #4563c5;
+    justify-self: left;
+    margin-left: 5px;
+    font-size: 16px;
+}
+.submit-button {
+    border-radius: 10px;
+    background-color: #4563c5;
+    padding: 10px 20px;
+    border: none;
+    align-self: center;
+    justify-self: right;
+    margin-right: 5px;
+    color: white;
+    font-size: 16px;
+}
+.closeBoxBtn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: #d5d5d5;
+}
+.closeBoxBtn:hover {
+    color: #d51a1a;
 }
