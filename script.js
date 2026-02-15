@@ -59,6 +59,14 @@ function displayBooks(arr) {
                     arr.splice(i, 1);
                 }
             }
+        });
+        checkbox.addEventListener("click", () => {
+            const parent = checkbox.parentElement.parentElement;
+            for (i = 0; i < arr.length; i++) {
+                if (arr[i].id === parent.dataset.id) {
+                    arr[i].beenRead = !(arr[i].beenRead);
+                }
+            }
         })
     }
 }
@@ -84,7 +92,7 @@ submitButton.addEventListener("click", (event) => {
     const getIsRead = document.querySelector("#fread");
     event.preventDefault();
     dialog.close();
-    addBookToLibrary(getTitle.value, getAuthor.value, getPageNum.value, getIsRead.value);
+    addBookToLibrary(getTitle.value, getAuthor.value, getPageNum.value, getIsRead.checked);
     displayBooks(myLibrary);
 })
 closeButton.addEventListener("click", (event) => {
