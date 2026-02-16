@@ -52,8 +52,10 @@ function displayBooks(arr) {
         card.appendChild(beenReadDIV);
         container.appendChild(card);
         closeBoxBtn.addEventListener("click", () => {
+            // Removes card from DOM
             const parent = closeBoxBtn.parentElement;
             container.removeChild(parent);
+            // Removes card from Array
             for (i = 0; i < arr.length; i++) {
                 if (arr[i].id === parent.dataset.id) {
                     arr.splice(i, 1);
@@ -62,11 +64,11 @@ function displayBooks(arr) {
         });
         checkbox.addEventListener("click", () => {
             const parent = checkbox.parentElement.parentElement;
-            for (i = 0; i < arr.length; i++) {
-                if (arr[i].id === parent.dataset.id) {
-                    arr[i].beenRead = !(arr[i].beenRead);
+            arr.map((x) => {
+                if (x.id === parent.dataset.id) {
+                    x.beenRead = !(x.beenRead);
                 }
-            }
+            });
         })
     }
 }
